@@ -9,6 +9,17 @@
     - The url should be in the form of "/picture/{xxxx}" where xxxx is uploaded image id
 - We are not using any databases, store the information about the uploaded images/title in a JSON format stored in disk.
 
+## Table of Contents
+
+- [Create a form with the required input](#create-a-form-with-the-required-input)
+- [Serving Static Files](#serving-static-files)
+- [Async Programming](#async-programming)
+- [HttpContext](#httpcontext)
+- [Data Validation](#data-validation)
+- [Storing image in disk](#storing-image-in-disk)
+- [Store the information in a JSON format stored in disk](#store-the-information-in-a-json-format-stored-in-disk)
+- [Display the form content](#display-the-form-content)
+
 # Create a form with the required input
 
 To get started, let's create a new project using the following command:
@@ -154,7 +165,7 @@ Create a directory called wwwroot, by default this item content is added to .csp
 ```
 Move your assets directory containing your logos and style.css to wwwroot.
 
-# UseStaticFiles():
+# Serving static files
 By calling this method in Program.cs, static files are enabled to be served.
 
 ```csharp
@@ -300,9 +311,10 @@ app.MapPost("/", async (HttpContext context) =>
 });
 ```
 ## Testing bad requests on postman
-![postman1](postman1.png) 
-![postman2](postman2.png) 
-![postman3](postman3.png)
+![postman1](./data/postman1.png) 
+![postman2](./data/postman2.png) 
+![postman3](./data/postman3.png)
+
 # Storing image in disk
 Images are stored with new name(a generated ID).<br>
 Store all images in a new directory called uploads.<br>
@@ -323,7 +335,7 @@ using (var stream = new FileStream(targetFilePath, FileMode.Create))
 ```
 </small>The using statement ensures that the file stream is properly closed and disposed of after the image file is copied to the target location.</small>
 
-# Store the information in a JSON format stored in disk.
+# Store the information in a JSON format stored in disk
 
 - include this -> ```using System.Text.Json;```
 ```csharp
