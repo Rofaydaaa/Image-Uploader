@@ -102,7 +102,7 @@ When you sumbit the form you are redirected to the route mentionned in :
 ```html 
 <form method='POST' action='/submit' enctype='multipart/form-data'>
 ```
-<p><b>***Note***:</b> This is not what we want to do, we shouldn't take an action, unless we are sure that the image format is valid.</p>
+<p><b>Note:</b> This is not what we want to do, we shouldn't take an action, unless we are sure that the image format is valid.</p>
 <p>You may wonder, we added this checks in the html, why do we need another check?!</p>
 <p>You are right! While we have incorporated checks in the HTML form to validate the image format on the client side,  it's crucial to emphasize that client-side validation alone is not sufficient. We must implement server-side checks as well</p>
 
