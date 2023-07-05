@@ -573,4 +573,4 @@ app.MapGet("/picture/{id}", async (string id) =>
 
 ## Todo: Separate your html from: 
 ```app.MapGet("/picture/{id}", async (string id) => {}``` <br>
-Think if how you can pass {image.Path} and {image.Title} to that file.
+Think of how you can pass {image.Path} and {image.Title} to that file.
