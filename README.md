@@ -247,7 +247,7 @@ The main difference between using ***context.Response.WriteAsync*** and ***Resul
 
 ## HttpContext.Request
 
-To get a deeper understanding on ***HttpsContext.Request***, we will with some code and debug.
+To get a deeper understanding on ***HttpsContext.Request***, we will do it with some code and debug.
 
 Let's add a break point in this post request and check our variables by running the debugger.
 - The debugger should stop after submitting the form
